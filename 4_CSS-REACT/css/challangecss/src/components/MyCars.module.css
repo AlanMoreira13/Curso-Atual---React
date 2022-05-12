@@ -1,0 +1,27 @@
+
+.my_whrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.my_style_title {
+    
+    width: 150px;
+    color: aqua;
+    background-color: brown;
+    border-radius: 15px;
+    border: 10px solid blue;
+    margin-bottom: 25px;
+}
+
+.my_style_paragraph {
+    color: teal;
+    background-color: gold;
+    padding: 5px;
+    max-width: 150px;
+    border-radius: 10px;
+    border: 1px dashed greenyellow;
+}
