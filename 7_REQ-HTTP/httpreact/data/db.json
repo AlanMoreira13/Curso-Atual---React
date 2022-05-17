@@ -1,0 +1,66 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Camiseta",
+      "price": 26.5
+    },
+    {
+      "id": 2,
+      "name": "Calça azul",
+      "price": 54.5
+    },
+    {
+      "id": 3,
+      "name": "Boné aba reta",
+      "price": 17.5
+    },
+    {
+      "name": "Batata doce",
+      "price": "4545",
+      "id": 4
+    },
+    {
+      "name": "Batata doce",
+      "price": "4545",
+      "id": 5
+    },
+    {
+      "name": "capa de chuva",
+      "price": "175.50",
+      "id": 6
+    },
+    {
+      "name": "mouse",
+      "price": "999",
+      "id": 7
+    },
+    {
+      "name": "Abacate",
+      "price": "19.99",
+      "id": 8
+    },
+    {
+      "name": "uva",
+      "price": "4.48",
+      "id": 9
+    },
+    {
+      "name": "teste",
+      "price": "2",
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
+    }
+  ]
+}
