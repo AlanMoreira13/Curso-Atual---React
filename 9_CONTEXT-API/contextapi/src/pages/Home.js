@@ -9,6 +9,7 @@ import { useCounterContext } from "../hooks/useCounterContext";
 import { useTitleColorContext } from "../hooks/useTitleColorContext";
 
 import "./Home.css";
+
 const Home = () => {
   // const { counter } = useContext(CounterContext);
   const { counter } = useCounterContext();
@@ -16,7 +17,7 @@ const Home = () => {
   // 5 - context mais complexo
   const { color, dispatch } = useTitleColorContext();
 
-  // 6 - alterando state completo
+  // 6 - alterando state complexo
   const setTitleColor = (color) => {
     dispatch({ type: color });
   };

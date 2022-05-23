@@ -51,16 +51,14 @@
       "id": 10
     },
     {
+      "name": "Suporte monitor",
+      "price": "175",
       "id": 11
     },
     {
+      "name": "Meia roxa",
+      "price": "19.90",
       "id": 12
-    },
-    {
-      "id": 13
-    },
-    {
-      "id": 14
     }
   ]
 }

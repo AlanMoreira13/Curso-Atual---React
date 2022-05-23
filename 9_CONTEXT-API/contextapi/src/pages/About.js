@@ -8,9 +8,11 @@ import { useTitleColorContext } from "../hooks/useTitleColorContext";
 import "./About.css";
 
 const About = () => {
-  const { color } = useTitleColorContext();
   // const { counter } = useContext(CounterContext);
   const { counter } = useCounterContext();
+
+  // 5 - context mais complexo
+  const { color } = useTitleColorContext();
 
   return (
     <div>

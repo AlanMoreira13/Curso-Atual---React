@@ -1,0 +1,19 @@
+{
+  "techs": [
+    {
+      "id": 1,
+      "name": "Notebook",
+      "price": 1999.99
+    },
+    {
+      "id": 2,
+      "name": "PC Gamer",
+      "price": 8000
+    },
+    {
+      "id": 3,
+      "name": "Placa de vídeo",
+      "price": 4999.99
+    }
+  ]
+}
