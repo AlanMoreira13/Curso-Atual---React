@@ -21,7 +21,7 @@ const {
   commentValidation,
 } = require("../middlewares/photoValidation");
 const authGuard = require("../middlewares/authGuard");
-const validate = require("../middlewares/handleValidation");
+const validate = require("../middlewares/handleValidations");
 const { imageUpload } = require("../middlewares/imageUpload");
 
 // routes

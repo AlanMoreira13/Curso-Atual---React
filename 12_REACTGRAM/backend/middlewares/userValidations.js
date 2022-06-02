@@ -1,6 +1,6 @@
 const { body } = require("express-validator");
 
-const userCreateValidator = () => {
+const userCreateValidation = () => {
   return [
     body("name")
       .isString()
@@ -17,7 +17,7 @@ const userCreateValidator = () => {
       .withMessage("A senha é obrigatória.")
       .isLength({ min: 5 })
       .withMessage("A senha precisa ter no mínimo 5 caracteres."),
-    body("confirmpassword")
+    body("confirmPassword")
       .isString()
       .withMessage("A confirmação de senha é obrigatória.")
       .custom((value, { req }) => {
@@ -54,7 +54,7 @@ const userUpdateValidation = () => {
 };
 
 module.exports = {
-  userCreateValidator,
+  userCreateValidation,
   loginValidation,
   userUpdateValidation,
 };

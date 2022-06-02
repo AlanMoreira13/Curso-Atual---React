@@ -2,7 +2,7 @@ const User = require("../models/User");
 
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const mongoose = require("mongoose");
+const { default: mongoose } = require("mongoose");
 
 const jwtSecret = process.env.JWT_SECRET;
 
@@ -69,8 +69,8 @@ const login = async (req, res) => {
   }
 
   //return user with token
-  res.status(201).json({
-    id: user._id,
+  res.status(200).json({
+    _id: user._id,
     profileImage: user.profileImage,
     token: generateToken(user._id),
   });
