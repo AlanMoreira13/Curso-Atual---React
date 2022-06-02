@@ -7,7 +7,7 @@ const photoSchema = new Schema(
     title: String,
     likes: Array,
     comments: Array,
-    userId: mongoose.objectId,
+    userId: mongoose.ObjectId,
     userName: String,
   },
   {
@@ -15,6 +15,6 @@ const photoSchema = new Schema(
   }
 );
 
-const Photo = mongoose.nodel("photo", photoSchema);
+Photo = mongoose.model("Photo", photoSchema);
 
 module.exports = Photo;
