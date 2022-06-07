@@ -80,6 +80,7 @@ const EditProfile = () => {
 
     setPreviewImage(image);
 
+    // Update image state
     setImageProfile(image);
   };
 
