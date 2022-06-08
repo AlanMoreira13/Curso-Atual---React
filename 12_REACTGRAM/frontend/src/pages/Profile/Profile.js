@@ -36,12 +36,12 @@ const Profile = () => {
     error: errorPhoto,
   } = useSelector((state) => state.photo);
 
-  const [title, setTitle] = useState("");
-  const [image, setImage] = useState("");
+  const [title, setTitle] = useState();
+  const [image, setImage] = useState();
 
-  const [editId, setEditId] = useState("");
-  const [editImage, setEditImage] = useState("");
-  const [editTitle, setEditTitle] = useState("");
+  const [editId, setEditId] = useState();
+  const [editImage, setEditImage] = useState();
+  const [editTitle, setEditTitle] = useState();
 
   // New form and edit form refs
   const newPhotoForm = useRef();
