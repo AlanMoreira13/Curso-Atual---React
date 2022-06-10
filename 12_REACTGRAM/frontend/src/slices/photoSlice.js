@@ -39,6 +39,18 @@ export const getUserPhotos = createAsyncThunk(
   }
 );
 
+// Get photo by id
+export const getPhoto = createAsyncThunk(
+  "photo/getphoto",
+  async (id, thunkAPI) => {
+    const token = thunkAPI.getState().auth.user.token;
+
+    const data = await photoService.getPhoto(id, token);
+
+    return data;
+  }
+);
+
 // Delete a photo
 export const deletePhoto = createAsyncThunk(
   "photo/delete",
@@ -75,18 +87,6 @@ export const updatePhoto = createAsyncThunk(
   }
 );
 
-// Get photo by id
-export const getPhoto = createAsyncThunk(
-  "photo/getphoto",
-  async (id, thunkAPI) => {
-    const token = thunkAPI.getState().auth.user.token;
-
-    const data = await photoService.getPhoto(id, token);
-
-    return data;
-  }
-);
-
 // Like a photo
 export const like = createAsyncThunk("photo/like", async (id, thunkAPI) => {
   const token = thunkAPI.getState().auth.user.token;
@@ -104,12 +104,12 @@ export const like = createAsyncThunk("photo/like", async (id, thunkAPI) => {
 // Add comment to a photo
 export const comment = createAsyncThunk(
   "photo/comment",
-  async (commentData, thunkAPI) => {
+  async (photoData, thunkAPI) => {
     const token = thunkAPI.getState().auth.user.token;
 
     const data = await photoService.comment(
-      { comment: commentData.comment },
-      commentData.id,
+      { comment: photoData.comment },
+      photoData.id,
       token
     );
 
@@ -264,7 +264,7 @@ export const photoSlice = createSlice({
         state.success = true;
         state.error = null;
 
-        state.photo.comments.push(action.payload.comment);
+        state.photo.comments.unshift(action.payload.comment);
 
         state.message = action.payload.message;
       })

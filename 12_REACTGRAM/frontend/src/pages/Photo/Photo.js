@@ -4,9 +4,9 @@ import { uploads } from "../../utils/config";
 
 // Components
 import Message from "../../components/Message";
-import { Link } from "react-router-dom";
 import PhotoItem from "../../components/PhotoItem";
 import LikeContainer from "../../components/LikeContainer";
+import { Link } from "react-router-dom";
 
 // Hooks
 import { useEffect, useState } from "react";
@@ -29,7 +29,7 @@ const Photo = () => {
     (state) => state.photo
   );
 
-  const [commentText, setCommentText] = useState("");
+  const [commentText, setCommentText] = useState();
 
   // Load photo data
   useEffect(() => {
@@ -47,11 +47,11 @@ const Photo = () => {
   const handleComment = (e) => {
     e.preventDefault();
 
-    const commentData = {
+    const photoData = {
       comment: commentText,
       id: photo._id,
     };
-    dispatch(comment(commentData));
+    dispatch(comment(photoData));
 
     setCommentText("");
 

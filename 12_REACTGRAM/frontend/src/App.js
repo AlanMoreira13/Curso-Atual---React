@@ -55,6 +55,7 @@ function App() {
               path="/register"
               element={!auth ? <Register /> : <Navigate to="/" />}
             />
+            {/* <Route path="register" element={<Register />} /> */}
             <Route
               path="/photos/:id"
               element={auth ? <Photo /> : <Navigate to="/login" />}
