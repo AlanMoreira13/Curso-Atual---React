@@ -10,7 +10,7 @@ const {
   getPhotoById,
   updatePhoto,
   likePhoto,
-  commnentPhoto,
+  commentPhoto,
   searchPhotos,
 } = require("../controllers/photoController");
 
@@ -45,7 +45,7 @@ router.put(
   authGuard,
   commentValidation(),
   validate,
-  commnentPhoto
+  commentPhoto
 );
 
 module.exports = router;

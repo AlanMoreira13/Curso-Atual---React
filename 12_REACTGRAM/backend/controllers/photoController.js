@@ -168,7 +168,7 @@ const likePhoto = async (req, res) => {
 };
 
 // comment functionality
-const commnentPhoto = async (req, res) => {
+const commentPhoto = async (req, res) => {
   const { id } = req.params;
   const { comment } = req.body;
 
@@ -184,12 +184,12 @@ const commnentPhoto = async (req, res) => {
     return;
   }
 
-  // put comment in the array commnets
+  // put comment in the array comments
   const userComment = {
     comment,
     userName: user.name,
     userImage: user.profileImage,
-    iserId: user._id,
+    userId: user._id,
   };
 
   photo.comments.push(userComment);
@@ -219,6 +219,6 @@ module.exports = {
   getPhotoById,
   updatePhoto,
   likePhoto,
-  commnentPhoto,
+  commentPhoto,
   searchPhotos,
 };
